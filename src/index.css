@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.disabled {
+    opacity: 0.6; /* Adjust the opacity to make it look disabled */
+    pointer-events: none; /* Disable pointer events */
+}
