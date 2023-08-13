@@ -21,6 +21,7 @@ import {
 } from 'react-query'
 import Home from './Layout/Home';
 import PlaylistCreation from './Layout/PlaylistCreation';
+import IndividualMovie from './Page/IndividualMovie/IndividualMovie';
 
 
 // Create a client
@@ -46,8 +47,15 @@ const router = createBrowserRouter([
     path: "playlist-Creation",
     element: <PlaylistCreation></PlaylistCreation>
   },
+  {
+    path: "movie",
+    element: <IndividualMovie></IndividualMovie>,
+    
+    
+  }
 ]);
-
+const appRoot = document.createElement('div');
+document.body.appendChild(appRoot);
 export const MovieBannerContext = createContext("golden")
 export const MovieListContext = createContext("bolden")
 
@@ -78,4 +86,4 @@ const Mainn = () => {
 
 export default Mainn;
 
-ReactDOM.createRoot(document.getElementById('root')).render(<Mainn></Mainn>)
+ReactDOM.createRoot(appRoot).render(<Mainn></Mainn>)

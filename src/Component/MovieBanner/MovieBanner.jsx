@@ -1,5 +1,6 @@
 import { useContext, useEffect, useState } from "react";
 import { MovieBannerContext } from "../../main";
+import { Link } from "react-router-dom";
 
 
 const MovieBanner = () => {
@@ -24,8 +25,12 @@ const MovieBanner = () => {
     }, [movieBannerData])
     //    console.log(movieBannerData.song);
     // console.log(movieBannerDataFinal);
+
+    
+
     return (
         <div className="flex flex-col gap-6  lg:flex-row">
+            
 
             <div className="movieBanner  lg:w-1/2 h-[400px]">
                 <img className="w-[900px] h-[400px]" src={movieBannerDataFinal.photoUrl} alt="" />

@@ -13,8 +13,10 @@ const MoviePlayList = () => {
         .then(data=> setMoviePlayList(data))
     },[movieListValue])
 //    console.log(MoviePlayList);
+// 
+// 
     return (
-        <div className="lg:w-1/2 lg:mx-auto bg-[#7F5283] rounded-md p-5 h-[500px] overflow-y-auto">
+        <div className="lg:w-1/2 lg:mx-auto bg-[#7F5283]  rounded-md p-5 h-[500px] overflow-y-auto ">
            {
             MoviePlayList && MoviePlayList.map((item, index)=> <MoviePlayListSpecific
             key={item?._id}
